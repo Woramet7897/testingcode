@@ -1,4 +1,9 @@
-from functions.FIZZBUZZ import get_fizzbuzz
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from functions.FizzBuzz import get_fizzbuzz
 import unittest
 
 
@@ -82,3 +87,7 @@ class PrimeListTest(unittest.TestCase):
         number = 960
         are_fb = get_fizzbuzz(number)
         self.assertEqual(are_fb, "FizzBuzz")
+
+
+if __name__ == "__main__":
+    unittest.main()
